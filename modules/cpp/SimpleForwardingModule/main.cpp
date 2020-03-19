@@ -3,6 +3,7 @@
 #include "zsdn/StartupHelper.h"
 #include "SimpleForwardingModule.hpp"
 #include <google/protobuf/stubs/common.h>
+#include <sstream>
 
 int main(int argc, char* argv[]) {
     int returnCode;

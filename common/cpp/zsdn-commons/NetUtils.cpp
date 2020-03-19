@@ -4,6 +4,8 @@
 
 #include "NetUtils.h"
 #include <algorithm>
+#include <sstream>
+#include <iomanip>
 
 namespace zsdn {
 

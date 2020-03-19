@@ -6,6 +6,7 @@
 #include <zsdn/Configs.h>
 #include "Poco/RegularExpression.h"
 #include "Poco/StringTokenizer.h"
+#include <sstream>
 
 extern "C" {
 }

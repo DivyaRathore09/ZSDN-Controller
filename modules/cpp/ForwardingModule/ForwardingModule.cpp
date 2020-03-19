@@ -15,6 +15,7 @@
 #include <Poco/StringTokenizer.h>
 #include "Poco/Stopwatch.h"
 #include "LociExtensions.h"
+#include <iomanip>
 
 extern "C" {
 #include "loci/loci.h"
