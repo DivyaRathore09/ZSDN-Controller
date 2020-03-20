@@ -12,10 +12,7 @@ RUN apt-get -y update
 
 RUN apt-get  install -y cmake build-essential
 
-RUN -i
-
-RUN add-apt-repository -y ppa:ts.sch.gr/ppa
+RUN add-apt-repository -u -y ppa:ts.sch.gr/ppa
 RUN apt-get -y update
-RUN apt-get install --quiet oracle-java8-installer
+RUN apt-get install -u oracle-java8-installer
 
-RUN exit
