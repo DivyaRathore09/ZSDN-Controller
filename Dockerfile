@@ -17,3 +17,5 @@ RUN add-apt-repository -u -y http://ppa.launchpad.net/ts.sch.gr//ppa/ubuntu/
 RUN apt-get -y update
 RUN yes|yes|apt-get install --allow-unauthenticated -y oracle-java8-installer
 
+RUN apt-get -y update
+
