@@ -15,7 +15,7 @@ RUN apt-get  install -y cmake build-essential
 
 RUN add-apt-repository -u -y http://ppa.launchpad.net/ts.sch.gr//ppa/ubuntu/
 RUN apt-get -y update
-RUN yes|yes|apt-get install --allow-unauthenticated -y oracle-java8-installer
+RUN shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && apt-get install --allow-unauthenticated -y oracle-java8-installer
 
 RUN apt-get -y update
 
