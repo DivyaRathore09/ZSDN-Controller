@@ -12,7 +12,7 @@ RUN apt-get -y update
 
 RUN apt-get  install -y cmake build-essential
 
-RUN sudo -i
+RUN -i
 
 RUN add-apt-repository -y ppa:ts.sch.gr/ppa
 RUN apt-get -y update
