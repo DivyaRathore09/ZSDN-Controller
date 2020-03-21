@@ -29,7 +29,7 @@ RUN apt-get install -y libpcap-dev
 
 RUN apt-get install -y flex byacc
 
-RUN ZSDN-Controller/./init-zsdn.sh
+RUN ./init-zsdn.sh
 
 
  
