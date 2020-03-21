@@ -27,6 +27,6 @@ RUN apt-get install -y git
 
 RUN git clone https://github.com/DivyaRathore09/ZSDN-Controller.git
 
-RUN ZSDN-Controller/./insit-zsdn.sh 
+RUN ZSDN-Controller/./init-zsdn.sh 
 
 
