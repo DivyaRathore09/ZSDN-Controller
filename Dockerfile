@@ -21,14 +21,6 @@ RUN apt-get install --allow-unauthenticated -y oracle-java8-installer
 
 RUN mkdir -p ~/Downloads
 
-RUN apt-get install -y maven
-
-RUN apt-get install -y flex byacc
-
-RUN apt-get install -y git
-
-RUN git clone https://github.com/zeroSDN/ZSDN-Controller.git
-
-RUN ZSDN-Controller/./init-zsdn.sh 
+ 
 
 
