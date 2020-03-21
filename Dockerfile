@@ -2,6 +2,10 @@ FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 
+RUN apt-get update -y
+
+RUN apt-get install -y libsodium-dev
+
 RUN apt-get update && apt install -y libprotobuf-dev protobuf-compiler
 
 RUN apt-get -y install software-properties-common
