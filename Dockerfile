@@ -29,7 +29,11 @@ RUN apt-get install -y libpcap-dev
 
 RUN apt-get install -y flex byacc
 
-RUN ./init-zsdn.sh
+RUN apt-get install -y git
+
+RUN git clone https://github.com/zeroSDN/ZSDN-Controller.git
+
+RUN ZSDN-Controller/./init-zsdn.sh
 
 
  
