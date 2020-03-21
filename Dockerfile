@@ -21,6 +21,15 @@ RUN apt-get install --allow-unauthenticated -y oracle-java8-installer
 
 RUN mkdir -p /root/Downloads
 
+RUN apt-get install -y maven
+
+RUN apt-get install mininet
+
+RUN apt-get install -y libpcap-dev
+
+RUN apt-get install -y flex byacc
+
+
  
 
 
