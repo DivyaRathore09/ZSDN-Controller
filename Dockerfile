@@ -19,6 +19,14 @@ RUN echo debconf shared/accepted-oracle-license-v1-1 select true | \debconf-set-
 RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | \debconf-set-selections
 RUN apt-get install --allow-unauthenticated -y oracle-java8-installer
 
-RUN ./init-zsdn.sh 
+RUN apt-get install -y maven
+
+RUN apt-get install -y flex byacc
+
+RUN apt-get install -y git
+
+RUN git clone https://github.com/DivyaRathore09/ZSDN-Controller.git
+
+RUN ZSDN-Controller/./insit-zsdn.sh 
 
 
