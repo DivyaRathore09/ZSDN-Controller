@@ -10,7 +10,7 @@ RUN add-apt-repository -y ppa:george-edison55/cmake-3.x
 
 RUN apt-get -y update
 
-RUN apt-get  install -y cmake build-essential
+RUN apt-get install -y cmake build-essential
 
 
 RUN add-apt-repository -u -y http://ppa.launchpad.net/ts.sch.gr//ppa/ubuntu/
@@ -28,6 +28,10 @@ RUN apt-get install -y mininet
 RUN apt-get install -y libpcap-dev
 
 RUN apt-get install -y flex byacc
+
+RUN apt-get install -y git
+
+RUN git clone https://github.com/zeroSDN/ZSDN-Controller.git
 
 
  
