@@ -19,7 +19,7 @@ RUN echo debconf shared/accepted-oracle-license-v1-1 select true | \debconf-set-
 RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | \debconf-set-selections
 RUN apt-get install --allow-unauthenticated -y oracle-java8-installer
 
-RUN mkdir -p ~/Downloads
+RUN mkdir -p /root/Downloads
 
  
 
