@@ -23,7 +23,7 @@ RUN mkdir -p /root/Downloads
 
 RUN apt-get install -y maven
 
-RUN apt-get install mininet
+RUN apt-get install -y mininet
 
 RUN apt-get install -y libpcap-dev
 
