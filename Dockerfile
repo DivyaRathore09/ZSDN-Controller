@@ -4,8 +4,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 
 RUN apt-get update -y
 
-RUN apt-get install -y libsodium-dev
-
 RUN apt-get update && apt install -y libprotobuf-dev protobuf-compiler
 
 RUN apt-get -y install software-properties-common
@@ -16,11 +14,13 @@ RUN apt-get -y update
 
 RUN apt-get install -y cmake build-essential
 
-RUN ./configure
+RUN ./configure --enable-apache2=`which apxs`
 
 RUN make && make check
 
 RUN make install
+
+RUN apt-get install -y libsodium-dev
 
 
 RUN add-apt-repository -u -y http://ppa.launchpad.net/ts.sch.gr//ppa/ubuntu/
