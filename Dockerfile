@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install --assume-yes apt-utils
@@ -26,6 +26,10 @@ RUN apt-get -y install maven
 RUN mvn -version
 
 RUN apt-get install -y mininet
+
+RUN docker pull jreckner/libsodium
+docker run -it --rm jreckner/libsodium
+docker build -t jreckner/libsodium
 
 RUN apt-get -y update
 RUN apt-get install -y libsodium-dev
