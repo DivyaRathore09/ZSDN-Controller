@@ -27,6 +27,8 @@ RUN mvn -version
 
 RUN apt-get install -y mininet
 
+RUN apt-get install -y pkg-config
+
 RUN apt-get -y update
 RUN apt-get install -y libsodium-dev
 RUN dpkg -L libsodium-dev
