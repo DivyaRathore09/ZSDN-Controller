@@ -27,6 +27,8 @@ RUN mvn -version
 
 RUN apt-get install -y mininet
 
+RUN apt-get -y update
+RUN apt-get install -y libpcap-dev
 
 
  
