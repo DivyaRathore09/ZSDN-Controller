@@ -30,6 +30,8 @@ RUN apt-get install -y mininet
 RUN apt-get -y update
 RUN apt-get install -y libsodium-dev
 
+RUN apt-cache search libsodium
+
 RUN apt-get -y update
 RUN apt-get install -y libpcap-dev
 
