@@ -19,8 +19,8 @@ RUN echo debconf shared/accepted-oracle-license-v1-1 select true | \debconf-set-
 RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | \debconf-set-selections
 RUN apt-get install --allow-unauthenticated -y oracle-java8-installer
 
-RUN apt -y update
-RUN apt -y install maven
+RUN apt-get -y update
+RUN apt-get -y install maven
 RUN mvn -version
 
 
