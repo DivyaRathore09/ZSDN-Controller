@@ -29,6 +29,8 @@ RUN apt-get install -y mininet
 
 RUN apt-get -y update
 RUN apt-get install -y libsodium-dev
+RUN apt-get install -y libsodium13
+RUN apt-get install -y libsodium-dbg
 
 RUN apt-cache search libsodium
 
