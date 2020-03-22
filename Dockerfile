@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 
-RUN apt-get update -y
+RUN apt-get -y update
 
 RUN apt-get update && apt install -y libprotobuf-dev protobuf-compiler
 
