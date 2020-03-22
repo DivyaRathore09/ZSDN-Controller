@@ -37,9 +37,15 @@ RUN apt-get install -y flex byacc
 
 RUN ls
 
-RUN chmod +x ./init-zsdn.sh
+RUN apt-get install -y git
 
-RUN ./init-zsdn.sh
+RUN git clone https://github.com/zeroSDN/ZSDN-Controller.git
+
+RUN cd ZSDN-Controller && ls && cd ..
+
+RUN chmod +x ZSDN-Controller/./init-zsdn.sh
+
+RUN ZSDN-Controller/./init-zsdn.sh
 
 
  
