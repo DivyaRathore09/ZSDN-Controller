@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install --assume-yes apt-utils
@@ -7,11 +7,11 @@ RUN apt-get -y update
 
 RUN apt-get -y install software-properties-common
 
+RUN add-apt-repository -y ppa:george-edison55/cmake-3.x
+
 RUN apt-get -y update
 
-RUN apt install -y snapd
-
-RUN snap install -y cmake --classic
+RUN apt-get install -y cmake build-essential
 
 RUN add-apt-repository -u -y http://ppa.launchpad.net/ts.sch.gr//ppa/ubuntu/
 RUN apt-get -y update
@@ -26,10 +26,6 @@ RUN apt-get -y install maven
 RUN mvn -version
 
 RUN apt-get install -y mininet
-
-RUN docker pull jreckner/libsodium
-RUN docker run -it --rm jreckner/libsodium
-RUN docker build -t jreckner/libsodium
 
 RUN apt-get -y update
 RUN apt-get install -y libsodium-dev
