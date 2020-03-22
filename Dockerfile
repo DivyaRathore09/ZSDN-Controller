@@ -28,10 +28,9 @@ RUN mvn -version
 RUN apt-get install -y mininet
 
 RUN apt-get -y update
-RUN add-apt-repository -y ppa:chris-lea/libsodium
-RUN echo "deb http://ppa.launchpad.net/chris-lea/libsodium/ubuntu trusty main" >> /etc/apt/sources.list;
-RUN echo "deb-src http://ppa.launchpad.net/chris-lea/libsodium/ubuntu trusty main" >> /etc/apt/sources.list;
-RUN apt-get update && apt-get install -y libsodium-dev;
+RUN apt-get install -y libsodium-dev
+RUN dpkg -L libsodium-dev
+
 
 
 RUN apt-cache search libsodium
