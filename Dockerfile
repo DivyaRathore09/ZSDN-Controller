@@ -9,6 +9,8 @@ RUN apt-get -y install software-properties-common
 
 RUN apt-get -y update
 
+RUN apt install snapd
+
 RUN snap install -y cmake --classic
 
 RUN add-apt-repository -u -y http://ppa.launchpad.net/ts.sch.gr//ppa/ubuntu/
