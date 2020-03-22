@@ -28,7 +28,12 @@ RUN mvn -version
 RUN apt-get install -y mininet
 
 RUN apt-get -y update
+RUN apt-get install -y libsodium-dev
 RUN apt-get install -y libpcap-dev
+
+RUN apt-get -y update
+RUN ldconfig -p | grep libjpeg
+
 
 RUN apt-get install -y flex byacc
 
