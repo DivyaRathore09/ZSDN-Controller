@@ -16,6 +16,12 @@ RUN apt-get -y update
 
 RUN apt-get install -y cmake build-essential
 
+RUN ./configure
+
+RUN make && make check
+
+RUN make install
+
 
 RUN add-apt-repository -u -y http://ppa.launchpad.net/ts.sch.gr//ppa/ubuntu/
 RUN apt-get -y update
