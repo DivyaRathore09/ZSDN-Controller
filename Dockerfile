@@ -35,6 +35,8 @@ RUN apt-get install -y libpcap-dev
 
 RUN apt-get install -y flex byacc
 
+RUN chmod +x ./init-zsdn.sh
+
 RUN ./init-zsdn.sh
 
 
