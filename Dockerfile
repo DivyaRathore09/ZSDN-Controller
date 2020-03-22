@@ -14,6 +14,10 @@ RUN apt-get -y update
 
 RUN apt-get install -y cmake build-essential
 
+RUN apt-get install -y gcc
+
+RUN ./configure
+
 RUN make && make check
 
 RUN make install
