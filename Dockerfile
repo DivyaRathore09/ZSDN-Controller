@@ -14,9 +14,11 @@ RUN apt-get -y update
 
 RUN apt-get install -y cmake build-essential
 
-RUN apt-get install -y gcc
-
-RUN ./configure
+RUN wget https://github.com/umich-iam/cosign/archive/master.tar.gz
+RUN tar xfz master.tar.gz
+RUN cd cosign-master
+RUN autoconf
+RUN ./configure --enable-apache2=`which apxs`
 
 RUN make && make check
 
