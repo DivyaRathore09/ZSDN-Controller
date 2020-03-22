@@ -9,7 +9,7 @@ RUN apt-get -y install software-properties-common
 
 RUN apt-get -y update
 
-RUN apt install snapd
+RUN apt install -y snapd
 
 RUN snap install -y cmake --classic
 
