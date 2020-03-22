@@ -14,8 +14,6 @@ RUN apt-get -y update
 
 RUN apt-get install -y cmake build-essential
 
-RUN ./configure --enable-apache2=`which apxs`
-
 RUN make && make check
 
 RUN make install
