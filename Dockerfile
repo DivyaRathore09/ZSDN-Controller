@@ -7,11 +7,9 @@ RUN apt-get -y update
 
 RUN apt-get -y install software-properties-common
 
-RUN add-apt-repository -y ppa:george-edison55/cmake-3.x
-
 RUN apt-get -y update
 
-RUN apt-get install -y cmake build-essential
+RUN snap install -y cmake --classic
 
 RUN add-apt-repository -u -y http://ppa.launchpad.net/ts.sch.gr//ppa/ubuntu/
 RUN apt-get -y update
