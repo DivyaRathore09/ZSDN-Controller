@@ -54,7 +54,7 @@ RUN chmod +x ZSDN-Controller/./init-zsdn.sh
 
 RUN ZSDN-Controller/./init-zsdn.sh
 
-ENTRYPOINT ["ZSDN-Controller/./run-modules.sh" , "-m" ,  "zsdn-default"]
+ENTRYPOINT ["./run-modules.sh" , "-m" ,  "zsdn-default"]
 
  
 
