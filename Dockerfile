@@ -58,7 +58,7 @@ RUN chmod +x ZSDN-Controller/./run-modules.sh
 
 WORKDIR /ZSDN-Controller
 
-ENTRYPOINT ["./run-modules.sh","-m","zsdn-default"]
+ENTRYPOINT ["./run-modules.sh","-m","zsdn-webadmin"]
 
  
 
