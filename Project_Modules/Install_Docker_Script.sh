@@ -20,6 +20,6 @@ sudo apt-get install -y docker-ce
 
 echo "Done5"
 
-sudo -i | RUN docker run hello-world | exit
+sudo -i | docker run hello-world | exit
 
 
