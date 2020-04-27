@@ -26,8 +26,4 @@ docker run hello-world
 
 echo "Done7"
 
-chmod +x ./Install_Docker_Script.sh
-
-echo "Done8"
-
 exit
