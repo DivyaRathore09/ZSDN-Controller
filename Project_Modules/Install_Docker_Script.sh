@@ -30,6 +30,3 @@ docker run hello-world
 
 echo "Done7"
 
-chmod +x ZSDN-Controller/Project_Modules/./.sh
-
-echo "Done8"
