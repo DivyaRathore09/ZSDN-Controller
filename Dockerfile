@@ -44,11 +44,11 @@ RUN apt-get install -y flex byacc
 
 RUN ls
 
-RUN chmod +x ZSDN-Controller/./init-zsdn.sh
+RUN chmod +x ./init-zsdn.sh
 
-RUN ZSDN-Controller/./init-zsdn.sh
+RUN ./init-zsdn.sh
 
-RUN chmod +x ZSDN-Controller/./run-modules.sh
+RUN chmod +x ./run-modules.sh
 
 WORKDIR /ZSDN-Controller
 
