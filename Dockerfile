@@ -56,10 +56,10 @@ RUN ZSDN-Controller/./init-zsdn.sh
 
 RUN chmod +x ZSDN-Controller/./build-modules.sh
 
-RUN ZSDN-Controller/./build-modules.sh -m zsdn-webadmin
-
-RUN chmod +x ZSDN-Controller/./run-modules.sh
-
 WORKDIR /ZSDN-Controller
+
+RUN ./build-modules.sh -m zsdn-webadmin
+
+RUN chmod +x ./run-modules.sh
 
 ENTRYPOINT ["./run-modules.sh","-m","zsdn-webadmin"]
